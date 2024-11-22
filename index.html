@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Comaptible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yaswanth Gangula - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,13 +15,14 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             background-color: rgb(4, 4, 4);
             color: white;
             font-family: 'Poppins', sans-serif;
-
+            line-height: 1.6;
         }
 
         nav {
@@ -30,6 +31,9 @@
             align-items: center;
             height: 80px;
             background-color: rgb(39, 39, 41);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav ul {
@@ -39,12 +43,13 @@
 
         nav ul li {
             list-style: none;
-            margin: 0 23px;
+            margin: 0 15px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: white;
+            transition: color 0.3s, font-size 0.3s;
         }
 
         nav ul li a:hover {
@@ -56,7 +61,7 @@
             border: 0;
             background: rgb(234, 196, 57);
             height: 1.2px;
-            margin: 60px 84px;
+            margin: 40px 0;
         }
 
         .left {
@@ -66,22 +71,22 @@
         .firstsection {
             display: flex;
             justify-content: space-around;
-            align-items: centre;
-            margin: 110px 0;
-
+            align-items: center;
+            padding: 80px 0;
         }
 
-        .firstsection>div {
-            width: 30%;
+        .firstsection > div {
+            width: 40%;
         }
 
         .leftsection {
-            margin: 80px 0;
             font-size: 2rem;
         }
 
         .rightsection img {
             width: 80%;
+            max-width: 400px;
+            border-radius: 50%;
         }
 
         .purple {
@@ -91,6 +96,7 @@
         .text-gray {
             color: rgb(102, 102, 100);
         }
+
         .text-sky {
             color: rgb(15, 255, 251);
         }
@@ -99,60 +105,39 @@
             color: rgb(255, 177, 10)
         }
 
-        .secondSection {
+        section {
             max-width: 80vw;
             margin: auto;
-            height: 70vh;
+            padding: 40px 0;
         }
 
-        .secondSection h1 {
-            margin: 40px 0;
-            font-size: 2.0rem;
+        section h1, section h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
         }
 
         .btn {
-            margin: auto;
-            padding: 12px;
+            display: inline-block;
+            padding: 12px 24px;
             background: rgb(39, 39, 41);
             color: white;
             border: 2px solid rgb(255, 177, 10);
             border-radius: 6px;
-            font-size: 20px;
+            font-size: 18px;
             cursor: pointer;
-
-        }
-
-        .buttons {
-            padding: 73px;
-
+            transition: all 0.3s;
+            text-decoration: none;
+            margin: 10px;
         }
 
         .btn:hover {
-            color: rgb(243, 195, 24);
-            font-size: 1.15rem;
-        }
-
-        .thirdSection {
-            max-width: 80vw;
-            margin: auto;
-            height: 75vh;
-        }
-
-        .education {
-            padding: 30px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-        }
-
-        .education h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            /* color: ; */
+            background-color: rgb(255, 177, 10);
+            color: rgb(39, 39, 41);
         }
 
         .education-item {
             margin-bottom: 30px;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #444;
             padding-bottom: 20px;
         }
 
@@ -183,33 +168,6 @@
             color: #777;
         }
 
-
-
-        footer {
-            background-color: rgb(24, 24, 24);
-        }
-
-        .footer {
-            display: flex;
-            padding: 23px 122px;
-            justify-content: space-evenly;
-
-        }
-
-        .footer ul {
-            list-style-type: disc;
-        }
-
-        .footer>div {
-            width: 533px;
-        }
-
-        .fourthSection {
-            max-width: 80vw;
-            margin: auto;
-            height: 135vh;
-        }
-
         .experience {
             margin-bottom: 40px;
             border-left: 4px solid rgb(255, 177, 10);
@@ -238,173 +196,84 @@
             color: #8c8b8b;
         }
 
-        .fifthSection {
-            max-width: 130vw;
-            margin: auto;
-            height: 80vh;
-        }
-
-        .project {
+        .skills {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .skill-card {
+            width: 150px;
+            height: 150px;
+            background-color: #211f1f;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            margin-bottom: 30px;
-            margin-right: 100px;
+            justify-content: center;
+            transition: transform 0.3s;
         }
 
-        .project img {
-            width: 200px;
-            height: auto;
-            margin-right: 20px;
+        .skill-card:hover {
+            transform: translateY(-10px);
         }
 
-        .project-details h3 {
-            margin: 0;
-            font-size: 24px;
+        .skill-card img {
+            width: 60px;
+            margin-bottom: 10px;
         }
 
-        .project-details p {
-            margin-top: 10px;
-        }
-
-        .project-details a {
-            display: inline-block;
-            margin-top: 10px;
-            color: #f3efef;
-            text-decoration: none;
-            font-weight: lighter;
-            border: 2px solid ffb10a;
-            padding: 5px 10px;
-            transition: background-color 0.3s;
-        }
-
-        .project-details a:hover {
-            background-color: #171616;
-            color: #fcc331;
+        .skill-card h3 {
+            font-size: 16px;
+            font-weight: 500;
         }
 
         .project {
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 20px;
-            align-items: center;
             margin-bottom: 40px;
-            margin-left: 50px;
         }
 
         .project img {
-            width: 70%;
+            width: 100%;
             max-width: 300px;
-            height: auto;
-            border-radius: 20px;
+            border-radius: 10px;
         }
 
         .project-details {
-            padding: 20px;
             background-color: rgb(39, 39, 41);
+            padding: 20px;
             border-radius: 10px;
         }
 
         .project-details h3 {
-            margin: 0;
-            font-size: 24px;
-            color: ffb10;
-        }
-
-        .project-details p {
-            margin-top: 10px;
-            color: rgb(253, 253, 253);
-
+            color: rgb(255, 177, 10);
+            margin-bottom: 10px;
         }
 
         .project-details a {
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 10px;
             color: white;
             text-decoration: none;
             font-weight: bold;
             border: 2px solid rgb(243, 167, 26);
             border-radius: 4px;
-            padding: 10px 20px;
+            padding: 8px 16px;
             transition: background-color 0.3s, color 0.3s;
         }
 
         .project-details a:hover {
-            background-color: #333;
-            color: #fff;
-        }
-
-        .sixthSection {
-            max-width: 80vw;
-            margin: auto;
-            height: 80vh;
-        }
-
-        .contact {
-            padding: 60px;
-            background-color: #000;
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-
-        .contact-form {
-            max-width: 400px;
-            margin: 0 auto;
-            background-color: #111;
-            padding: 40px;
-            border-radius: 8px;
-        }
-
-        .contact-form form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .input-field,
-        .textarea-field {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            font-size: 16px;
-            border-radius: 4px;
-            border: none;
-            background-color: #222;
-            color: #fff;
-        }
-
-        .textarea-field {
-            height: 120px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #333;
-            color: rgb(243, 167, 26);
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .submit-btn:hover {
-            background-color: #555;
+            background-color: rgb(243, 167, 26);
+            color: rgb(39, 39, 41);
         }
 
         footer {
             background-color: #333;
             padding: 20px;
-            color: #fff;
             text-align: center;
-        }
-
-        .footer-links {
-            margin-bottom: 20px;
         }
 
         .footer-links a {
@@ -418,65 +287,49 @@
         }
 
         .footer-social a {
-            display: inline-block;
             color: #fff;
             text-decoration: none;
             margin: 0 10px;
-        }
-
-        .footer-social a i {
             font-size: 20px;
         }
 
-        .eightSection {
-            max-width: 80vw;
-            margin: auto;
-            height: 70vh;
-        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 20px 0;
+            }
 
-        .skills {
-            padding: 40px;
-        }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
 
-        .skill {
-            display: inline-block;
-            margin-right: 20px;
-            margin-bottom: 30px;
-        }
+            nav ul li {
+                margin: 10px 0;
+            }
 
-        .skill-card {
-            position: relative;
-            width: 200px;
-            height: 200px;
-            background-color: #211f1f;
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
+            .firstsection {
+                flex-direction: column;
+                text-align: center;
+            }
 
-        .skill-card:hover {
-            transform: translateY(-15px);
-        }
+            .firstsection > div {
+                width: 100%;
+            }
 
-        .skill-card img {
-            width: 90px;
-            margin-bottom: 10px;
-        }
+            .project {
+                grid-template-columns: 1fr;
+            }
 
-        .skill-card h3 {
-            margin: 0;
-            font-size: 20px;
-            font-weight: 500;
+            .project img {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
 
 <body>
-
     <header>
         <nav>
             <div class="left">Hello from Yash</div>
@@ -493,73 +346,80 @@
             </div>
         </nav>
     </header>
+
     <main>
         <section class="firstsection" id="home">
             <div class="leftsection">
                 Hi, My name is <span class="purple">Yaswanth Gangula</span>
-                <div> and I am a zealous </div>
-                <span id="element"> </span>
+                <div>and I am a zealous</div>
+                <span id="element"></span>
             </div>
             <div class="rightsection">
-                <img src="firstpic.jpeg" alt="">
+                <img src="firstpic.jpeg" alt="Yaswanth Gangula">
             </div>
         </section>
+
         <hr>
-        <section class="secondSection" id="about">
-            <span class="text-gray">You will be occupied for the next 2 minutes exploring insights about me </span>
+
+        <section id="about">
+            <span class="text-gray">You will be occupied for the next 2 minutes exploring insights about me</span>
             <h1>About Me</h1>
-            Hello! I'm Yaswanth Gangula, an Electronics and Communication Engineering graduate from Vellore Institute of Technology, Vellore. 
-            My journey in Vellore has shaped me into a versatile individual deeply passionate about technology, research, and automation. 
-            My passion for learning and my commitment to excellence drive me to actively seek 
-            opportunities to collaborate with like minded people on exciting and impactful projects. I believe in the power of interdisciplinary collaboration and 
-            am eager to contribute my skills and expertise to create innovative solutions for real problems affecting real people. Whether it's image processing applications, or
-            conducting indepth research, or crafting user centric web designs, I am ready to embrace new challenges and make a meaningful
-            impact in the world of technology. I also freelance sometimes. So, feel free to email me at <a class="text-sky"  href= 'mailto:yaswanthgangula@gmail.com'> yaswanthgangula@gmail.com</a>  to connect. 
+            <p>
+                Hello! I'm Yaswanth Gangula, an Electronics and Communication Engineering graduate from Vellore Institute of Technology, Vellore. 
+                My journey in Vellore has shaped me into a versatile individual deeply passionate about technology, research, and automation. 
+                My passion for learning and my commitment to excellence drive me to actively seek 
+                opportunities to collaborate with like-minded people on exciting and impactful projects. I believe in the power of interdisciplinary collaboration and 
+                am eager to contribute my skills and expertise to create innovative solutions for real problems affecting real people. Whether it's image processing applications, or
+                conducting in-depth research, or crafting user-centric web designs, I am ready to embrace new challenges and make a meaningful
+                impact in the world of technology. I also freelance sometimes. So, feel free to email me at <a class="text-sky" href="mailto:yaswanthgangula@gmail.com">yaswanthgangula@gmail.com</a> to connect.
+            </p>
             
             <div class="buttons">
-                <a href="https://drive.google.com/file/d/11WlrPR3UXO5x3FIvPz1mjVipJpXT3KHO/view?usp=sharing" button
-                    class="btn">My Resume</button></a>
-                <a href="https://www.linkedin.com/in/yaswanth-gangula-207903191/" button class="btn"> My
-                    Linkedin</button></a>
+                <a href="https://drive.google.com/file/d/11WlrPR3UXO5x3FIvPz1mjVipJpXT3KHO/view?usp=sharing" class="btn">My Resume</a>
+                <a href="https://www.linkedin.com/in/yaswanth-gangula-207903191/" class="btn">My Linkedin</a>
             </div>
         </section>
+
         <hr>
-        <section class="thirdSection" id="education">
-            <span class="text-gray">My Education journey </span>
+
+        <section id="education">
+            <span class="text-gray">My Education journey</span>
             <h2>Education</h2>
             <div class="education-item">
-                <h3> University of Cincinnati</h3>
-                <p class="education-date">2024 - 2026(Expected)</p>
+                <h3>University of Cincinnati, Cincinnati</h3>
+                <p class="education-date">2024 - 2026 (Expected)</p>
                 <p class="education-degree">Master of Science in Computer Science</p>
-                <p class="education-description"> </p>
             </div>
             <div class="education-item">
-                <h3>Vellore Institute of Technology</h3>
+                <h3>Vellore Institute of Technology, Vellore</h3>
                 <p class="education-date">2019 - 2023</p>
-                <p class="education-degree">Bachelor of Technology in Electronics and Communication Engineering</p>
-                <p class="education-description"> IEEE CAS, Red Cross VIT</p>
+                <p class="education-degree">Bachelor of Technology in Electronics and Communication Engineering - GPA (3.54/4)</p>
+                <p class="education-description">IEEE CAS, Red Cross VIT</p>
             </div>
             <div class="education-item">
-                <h3>Sasi junior college, velivennu</h3>
-                
-                <p class="education-description"> MPC(Mathematics,Physics, and Chemistry)
-                    Percentage scored in class 12: 95.6% (956/1000).</p>
+                <h3>Sasi junior college, Velivennu</h3>
+                <p class="education-description">MPC (Mathematics, Physics, and Chemistry) Percentage scored in class 12: 95.6% (956/1000).</p>
             </div>
-            
         </section>
+
         <hr>
-        <section class="fourthSection" id="experience">
+
+        <section id="experience">
             <span class="text-gray">Co-Curricular Activities and Work Experience</span>
-            <h3>Experience</h3>
+            <h2>Experience</h2>
             
+            <div class="experience">
+                <p class="job-title">Python Developer</p>
+                <p class="company">Living Pixels Entertainment Pvt Ltd.</p>
+                <p class="dates">May 2023 - June 2024</p>
+                <p class="description">Engineered and implemented 2D and 3D VFX pipeline processing workflows for Maya using Python, optimizing asset handling and rendering efficiency.</p>
+            </div>
             
             <div class="experience">
                 <p class="job-title">Research work under Dr.Abdul Majeed K.K</p>
                 <p class="company">VIT Vellore</p>
                 <p class="dates">Dec 2022 - April 2023</p>
-                <p class="description"> As a part of my capstone work, I developed a deep learning model that detects various types of blood cells in medical images, providing cell
-                    counts with 97% accuracy. The model was built with CSPDarknet53 and SSP as the backbone. The results were published in
-                    an IEEE conference hosted by NIT Jalandhar. This work was requested as an extension for ASTES Journal, which I am currently working on.</p>
+                <p class="description">As a part of my capstone work, I developed a deep learning model that detects various types of blood cells in medical images, providing cell counts with 97% accuracy. The model was built with CSPDarknet53 and SSP as the backbone. The results were published in an IEEE conference hosted by NIT Jalandhar. This work was requested as an extension for ASTES Journal, which I am currently working on.</p>
             </div>
 
             <div class="experience">
@@ -567,190 +427,165 @@
                 <p class="company">IEEE CAS (IEEE Student chapter, VIT Vellore)</p>
                 <p class="dates">May 2022 - April 2023</p>
                 <p class="description">As a Software Core Member, I was responsible for developing and maintaining software applications for chapter projects, including the automated firefighting robot, while also offering technical guidance and support to fellow members. Additionally, in my role as a Management Core Member, I took charge of external sessions, addressed student inquiries, liaised with sponsors for hackathons, and contributed to various documentation tasks.</p>
-                <a  class="text-sky" href="https://drive.google.com/file/d/1QKk4Dx9aDHcUTHACE5ulyS8UdLoAhuUq/view?usp=sharing"> Check here</a>
+                <a href="https://drive.google.com/file/d/1QKk4Dx9aDHcUTHACE5ulyS8UdLoAhuUq/view?usp=sharing" class="text-sky">Check here</a>
             </div>
 
             <div class="experience">
                 <p class="job-title">Python Technical Intern</p>
                 <p class="company">Cureya</p>
                 <p class="dates">Aug 2021- Oct 2021</p>
-                <p class="description">Conducted exploratory data analysis, implemented various machine learning techniques, and
-                    documented observations for healthcare datasets and wellness projects. Designed and developed a chatbot using Python, and
-                    integrated it into a website using Flask and JavaScript</p>
-                    <a  class="text-sky" href="https://drive.google.com/file/d/1c_xZWGfMWoDq9JMqossnw-IGXL6CfpEQ/view?usp=sharing"> Check here</a>
+                <p class="description">Conducted exploratory data analysis, implemented various machine learning techniques, and documented observations for healthcare datasets and wellness projects. Designed and developed a chatbot using Python, and integrated it into a website using Flask and JavaScript</p>
+                <a href="https://drive.google.com/file/d/1c_xZWGfMWoDq9JMqossnw-IGXL6CfpEQ/view?usp=sharing" class="text-sky">Check here</a>
             </div>
 
             <div class="experience">
                 <p class="job-title">Summer Intern</p>
                 <p class="company">Bharat Sanchar Nigam Limited</p>
-                <p class="dates">June 2021 - July 2021</p>
-                <p class="description">During my internship at BSNL, I had the opportunity to work across six diverse departments: NIB, OCB, FTTH, EB/IT, MSC, and ETR. Throughout my tenure, I acquired practical knowledge in utilizing communication devices like DSLAM, OCLAN, and IPTAX. Additionally, I gained exposure to marketing strategies and industry-standard communication techniques.. Built an insect repellent circuit using a 555 timer IC operating at 37Hz.</p>
-                <a  class="text-sky" href="https://drive.google.com/file/d/1krI0jPo2cR2jWkfvFh5cK_X8kpoFA9Op/view?usp=sharing"> Check here</a>
-                            
+                <p class="dates">June 2021 - Aug 2021</p>
+                <p class="description">During my internship at BSNL, I had the opportunity to work across six diverse departments: NIB, OCB, FTTH, EB/IT, MSC, and ETR. Throughout my tenure, I acquired practical knowledge in utilizing communication devices like DSLAM, OCLAN, and IPTAX. Additionally, I gained exposure to marketing strategies and industry-standard communication techniques. Built an insect repellent circuit using a 555 timer IC operating at 37Hz.</p>
+                <a href="https://drive.google.com/file/d/1krI0jPo2cR2jWkfvFh5cK_X8kpoFA9Op/view?usp=sharing" class="text-sky">Check here</a>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="skills">
+            <span class="text-gray">Why play it safe when the best stories start with 'I can't believe I did that'?</span>
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill-card">
+                    <img src="html.png" alt="HTML">
+                    <h3>HTML</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="css.png" alt="CSS">
+                    <h3>CSS</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="js.png" alt="JavaScript">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="python.png" alt="Python">
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="java.jpg" alt="Java">
+                    <h3>Java</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="figma.png" alt="Figma">
+                    <h3>Figma</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="matlab.png" alt="MATLAB">
+                    <h3>MATLAB</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="linux.png" alt="Linux">
+                    <h3>Linux</h3>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="project">
+            <span class="text-gray">Here are some of my selected projects. I only put my published work here.</span>
+            <h2>Publications and Projects</h2>
+
+            <div class="project">
+                <img src="parkinson.jpg" alt="BloodcellNet Project">
+                <div class="project-details">
+                    <h3>BloodcellNet</h3>
+                    <p>Developed a model that detects different types of blood cells in a medical image and gives the count using deep learning with CSPDarknet53 and SSP as the backbone and published the results in the IEEE conference at NIT Jalandhar. We are currently working on the extension of this paper.</p>
+                    <a href="https://ieeexplore.ieee.org/document/10176449">Learn More</a>
+                </div>
             </div>
 
+            <div class="project">
+                <img src="arm.jpg" alt="Borewell Monitoring Project">
+                <div class="project-details">
+                    <h3>IoT based Borewell Monitoring and Child Rescue System using Multi Sensor Fusion</h3>
+                    <p>The proposed architecture involves a multisensor fusion, communication devices, and cloud-based applications to monitor the borewell's status and alert authorities in case of emergencies. The system can detect the presence of a child in the borewell using a combination of sensors, such as temperature, pressure, and movement sensors. I presented the paper at an IEEE conference.</p>
+                    <a href="https://ieeexplore.ieee.org/document/10169311">Learn More</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="m.png" alt="Banknote Authentication Project">
+                <div class="project-details">
+                    <h3>Investigation of Various Machine Learning Techniques for Banknote Authentication</h3>
+                    <p>This project underscores the prowess of machine learning algorithms, with a specific focus on Neural Network, in their ability to precisely categorize banknotes and identify counterfeit ones. These discoveries offer valuable guidance for the development of resilient and effective banknote authentication systems, thereby safeguarding the integrity and security of financial transactions. Additionally, the research findings were presented at an IEEE conference, contributing to the knowledge within the academic community and beyond.</p>
+                    <a href="https://ieeexplore.ieee.org/document/10270276">Learn More</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="ww.png" alt="SafeCuff Project">
+                <div class="project-details">
+                    <h3>SafeCuff: An Automated Cuff Pressure Monitoring and Control System for Enhanced Patient Safety</h3>
+                    <p>This project, SafeCuff, introduces an IoT-based architecture for cuff pressure monitoring and control, as detailed in this study. SafeCuff effectively addresses the challenges associated with pressure fluctuations and enhances patient safety, especially in varying altitudes. I presented the work at an IEEE conference. The system's incorporation of remote notifications and dual sensor configurations ensures its reliability and user-friendliness, delivering real-time data to healthcare professionals for prompt intervention.</p>
+                    <a href="https://drive.google.com/drive/folders/1i4HU_OTTmFoL_XQjEmljhxFz9FDDTpAu?usp=sharing">Learn More</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="r.png" alt="Smart Irrigation System Project">
+                <div class="project-details">
+                    <h3>IoT Based Smart Irrigation System using DTMF and 8051 MCU</h3>
+                    <p>In this project, we proposed an IOT based Smart Irrigation System using DTMF (Dual Tone Multi Frequency) and 8051 MCU (MicrocontrollerUnit) as an innovative and transformative solution. This affordable system combines the power of DTMF technology with the versatility of the 8051 microcontrollers, enabling remote control and monitoring of the irrigation process. We published the paper in a national journal.</p>
+                    <a href="https://www.ijraset.com/best-journal/iot-based-smart-irrigation-system-using-dtmf-and-8051-mcu">Learn More</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="drow.png" alt="Driver Alcohol and Drowsiness Detection System">
+                <div class="project-details">
+                    <h3>Driver Alcohol and Drowsiness Detection System</h3>
+                    <p>Utilizing a combination of GPS, GSM, and a GSM module, and a CNN model the Vehicle Accident Alert System effectively broadcasts an alarm message containing precise accident location details. Simultaneously, our central monitoring system continuously monitors the driver's fatigue levels and yaw score. The project's overarching objective centers on accident prevention by addressing potential driver errors.</p>
+                    <a href="https://www.ijrti.org/viewpaperforall?paper=IJRTI2211061">Learn More</a>
+                </div>
+            </div>
         </section>
+
         <hr>
-        <section class="eightsection" id="skills">
-            <section id="skills">
-                <span class="text-gray">Determination flows in my blood and Creativity swirls in my veins </span>
-                <section class="skills">
-                    <h2>Skills</h2>
-                    <section class="skills">
-                        <div class="skill">
-                            <div class="skill-card">
-                                <img src="html.png" alt="HTML">
-                                <h3>HTML</h3>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill-card">
-                                <img src="css.png" alt="CSS">
-                                <h3>CSS</h3>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill-card">
-                                <img src="js.png" alt="JavaScript">
-                                <h3>JavaScript</h3>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill-card">
-                                <img src="python.png" alt="Python">
-                                <h3>Python</h3>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill-card">
-                                <img src="java.jpg" alt="Java">
-                                <h3>Java</h3>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill-card">
-                                <img src="figma.png" alt="Figma">
-                                <h3>Figma</h3>
-                            </div>
-                        </div>
 
-                        </div>
-                        <div class="skill">
-                            <div class="skill-card">
-                                <img src="matlab.png" alt="MATLAB">
-                                <h3>MATLAB</h3>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill-card">
-                                <img src="linux.png" alt="Linux">
-                                <h3>Linux</h3>
-                            </div>
-                        </div>
-                    </section>
+        <section id="contact">
+            <span class="text-gray" style="font-size: 1.7em; color: #ffb10a;">My Contact</span>
+            <div class="education-item">
+                <p class="contact-email">Send me an email <a class="text-sky" href="mailto:yaswanthgangula@gmail.com">yaswanthgangula@gmail.com</a> to connect.</p>
+                <p class="contact-number">or call me +1 (513)-462-6591</p>
+            </div>
+        </section>
+    </main>
 
+    <footer>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#project">Projects</a>
+            <a href="#contact">Contact Me</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/yash_13111/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/yaswanth-gangula-207903191/"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2023 Yaswanth Gangula - Portfolio. All rights reserved.</p>
+    </footer>
 
-                    <hr>
-                    <section class="fifthsection" id="project">
-                        <section id="projects">
-                            <span class="text-gray">Here are some of my selected projects. I only put my published work here.</span>
-                            <h2>Publications and Projects</h2>
-
-                            <div class="project">
-                                <img src="parkinson.jpg" alt="Project 1">
-                                <div class="project-details">
-                                    <h3>BloodcellNet</h3>
-                                    <p> Developed a model that detects different types of blood cells in a 
-                                        medical image and gives the count using deep learning with CSPDarknet53 
-                                        and SSP as the backbone and published the results in the IEEE conference at NIT Jalandhar. We are currently working on the extension of this paper.</p>
-                                    <a href="https://ieeexplore.ieee.org/document/10176449">Learn More</a>
-                                </div>
-                            </div>
-                            <div class="project">
-                                <img src="arm.jpg" alt="Project 2">
-                                <div class="project-details">
-                                    <h3>IoT based Borewell Monitoring and Child Rescue System using Multi Sensor Fusion.</h3>
-                                    <p>The proposed architecture involves a multisensor fusion, communication devices, and cloud based applications 
-                                        to monitor the borewell’s status and alert authorities in case of emergencies. 
-                                        The system can detect the presence of a child in the borewell using a combination of 
-                                        sensors, such as temperature, pressure, and movement sensors. I presented the paper at an IEEE conference.
-                                    </p>
-                                    <a href="https://ieeexplore.ieee.org/document/10169311">Learn More</a>
-                                </div>
-                            </div>
-                            <div class="project">
-                                <img src="m.png" alt="Project 2" style="width: 200%; height: auto;">
-
-                                <div class="project-details">
-                                    <h3>Investigation of Various Machine Learning Techniques for Banknote Authentication</h3>
-                                    <p>This project underscores the prowess of machine learning algorithms, with a specific focus on Neural Network, in their ability to precisely categorize banknotes and identify counterfeit ones. These discoveries offer valuable guidance for the development of resilient and effective banknote authentication systems, thereby safeguarding the integrity and security of financial transactions. Additionally, the research findings were presented at an IEEE conference, contributing to the knowledge within the academic community and beyond.
-                                    </p>
-                                    <a href="https://ieeexplore.ieee.org/document/10270276">Learn More</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="project">
-                                <img src="ww.png" alt="Project 2" style="width:40%; height: auto;">
-
-                                <div class="project-details">
-                                    <h3>SafeCuff: An Automated Cuff
-                                        Pressure Monitoring and Control System for Enhanced Patient Safety
-                                    </h3>
-                                    <p>This project, SafeCuff, introduces an IoT based architecture for cuff pressure monitoring and control, as detailed in this study. SafeCuff effectively addresses the challenges associated with pressure fluctuations and enhances patient safety, especially in varying altitudes. I presented the work at an IEEE conference. The system's incorporation of remote notifications and dual sensor configurations ensures its reliability and user friendliness, delivering real time data to healthcare professionals for prompt intervention.
-                                    </p>
-                                    <a href="https://drive.google.com/drive/folders/1i4HU_OTTmFoL_XQjEmljhxFz9FDDTpAu?usp=sharing">Learn More</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="project">
-                                <img src="r.png" alt="Project 2">
-                                <div class="project-details">
-                                    <h3>IoT Based Smart Irrigation System using DTMF and 8051 MCU</h3>
-                                    <p>
-                                        In this project, we proposed an IOT based Smart Irrigation System using DTMF (Dual Tone Multi Frequency) and 8051 MCU (MicrocontrollerUnit) as an innovative and transformative solution. This affordable system combines the power of DTMF technology with the versatility of the 8051 microcontrollers, enabling remote control and monitoring of the irrigation process. We published the paper in a national journal.
-                                    </p>
-                                    <a href="https://www.ijraset.com/best-journal/iot-based-smart-irrigation-system-using-dtmf-and-8051-mcu">Learn More</a>
-                                </div>
-                            </div>
-                            <div class="project">
-                                <img src="drow.png" alt="Project 2" style="width: 50%; height: auto;">
-
-                                <div class="project-details">
-                                    <h3>
-                                        Driver Alcohol and Drowsiness Detection System</h3>
-                                    <p>Utilizing a combination of GPS, GSM, and a GSM module, and a CNN model the Vehicle Accident Alert System effectively broadcasts an alarm message containing precise accident location details. Simultaneously, our central monitoring system continuously monitors the driver's fatigue levels and yaw score. The project's overarching objective centers on accident prevention by addressing potential driver errors.
-                                    </p>
-                                    <a href="https://www.ijrti.org/viewpaperforall?paper=IJRTI2211061">Learn More</a>
-                                </div>
-                            </div>
-                            <hr>
-                           
-                            <section class="sixthsection">
-                                <footer>
-                                    <div class="footer-links">
-                                        <a href="#home">Home</a>
-                                        <a href="#about">About</a>
-                                        <a href="#education">Education</a>
-                                        <a href="#experience">Experience</a>
-                                        <a href="#skills">Skills</a>
-                                        <a href="#project">Projects</a>
-                                        <a href="#contact">Contact Me</a>
-                                    </div>
-                                    <div class="footer-social">
-                                        <a href="https://www.instagram.com/yash_13111/"><i
-                                                class="fab fa-instagram"></i></a>
-                                        <a href="https://www.linkedin.com/in/yaswanth-gangula-207903191/"><i
-                                                class="fab fa-linkedin"></i></a>
-                                    </div>
-                                    <p>&copy; 2023 Yaswanth Gangula - Portfolio. All rights reserved.</p>
-                                </footer>
-                                <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-                                <script>
-                                    var typed = new Typed('#element', {
-                                        strings: [ 'Data Analyst', 'Research Enthusiast','UI/UX designer','Tech junkie','Numismatic','Engineer' ],
-                                        typeSpeed: 25,
-                                    });
-                                </script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Data Analyst', 'Research Enthusiast', 'UI/UX designer', 'Tech junkie', 'Numismatic', 'Engineer'],
+            typeSpeed: 25,
+            loop: true
+        });
+    </script>
 </body>
 
 </html>
+
